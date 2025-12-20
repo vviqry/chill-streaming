@@ -84,11 +84,13 @@ body {
   color: #fff;
   font-size: 12px;
 }
+
 @media (max-width: 768px) {
   .dropdown.ms-auto {
     margin-left: 0 !important;
   }
 }
+
 @media (max-width: 768px) {
   .navbar-container-mobile {
     padding-left: 12px;
@@ -186,46 +188,46 @@ body {
   line-height: 1.7;
 }
 
-/* TOMBOL HERO - SELALU SEJAJAR */
+/* ========== HERO BUTTONS - DIPERBAIKI ========== */
 .hero-buttons-row {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+  border-radius: 25px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  width: fit-content;
 }
 
 .play-btn,
 .info-btn {
   padding: 12px 30px;
   font-weight: bold;
-  border-radius: 2%;
+  border-radius: 25px;
   transition: all 0.3s;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   white-space: nowrap;
   flex-shrink: 0;
-  -webkit-border-radius: 2%;
-  -moz-border-radius: 2%;
-  -ms-border-radius: 2%;
-  -o-border-radius: 2%;
+  border: none;
+  font-size: 1rem;
 }
 
 .play-btn {
   background: #0f1e93;
-  border: none;
   color: white;
 }
 
 .play-btn:hover {
-  background: rgba(15, 30, 147);
+  background: #424daa;
   transform: scale(1.05);
 }
 
 .info-btn {
   background: rgba(109, 109, 110, 0.7);
-  border: none;
   color: white;
 }
 
@@ -239,14 +241,10 @@ body {
   padding: 5px 12px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 25 px;
+  border-radius: 25px;
   font-size: 0.9rem;
   white-space: nowrap;
   flex-shrink: 0;
-  -webkit-border-radius: 25 px;
-  -moz-border-radius: 25 px;
-  -ms-border-radius: 25 px;
-  -o-border-radius: 25 px;
 }
 
 /* ========== CONTENT SECTIONS ========== */
@@ -318,7 +316,7 @@ body {
 /* ========== FOOTER ========== */
 .footer {
   background: linear-gradient(to top, #0f0f0f, #1a1a1a);
-  padding: 0px 0;
+  padding: 60px 0 20px;
   color: #aaa;
 }
 
@@ -353,6 +351,7 @@ body {
 .footer a:hover {
   color: #fff;
 }
+
 /* FOOTER MOBILE DROPDOWN */
 .footer-toggle {
   width: 100%;
@@ -412,8 +411,8 @@ body {
   .nav-menu-container {
     display: flex !important;
     flex-direction: row !important;
-    gap: 0px;
-    margin: 0 0px;
+    gap: 15px;
+    margin: 0 15px;
     justify-content: flex-start;
     overflow-x: auto;
     padding-bottom: 5px;
@@ -431,6 +430,7 @@ body {
 
   .nav-menu-container a {
     font-size: 0.9rem;
+    padding: 5px 0;
   }
 
   .user-avatar {
@@ -458,22 +458,31 @@ body {
     font-size: 1rem;
   }
 
+  /* HERO BUTTONS - MOBILE */
   .hero-buttons-row {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     gap: 10px;
-    padding-bottom: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  .hero-buttons-row::-webkit-scrollbar {
+    display: none;
   }
 
   .play-btn,
   .info-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
+    border-radius: 20px;
   }
 
   .age-rating {
     padding: 5px 10px;
     font-size: 0.85rem;
+    border-radius: 20px;
   }
 
   .movie-poster {
@@ -490,7 +499,7 @@ body {
 
   .nav-menu-container {
     gap: 10px;
-    margin: 0 8px;
+    margin: 0 10px;
   }
 
   .nav-menu-container a {
@@ -513,17 +522,21 @@ body {
 
   .hero-buttons-row {
     gap: 8px;
+    padding: 8px;
+    border-radius: 15px;
   }
 
   .play-btn,
   .info-btn {
     padding: 8px 15px;
     font-size: 0.85rem;
+    border-radius: 15px;
   }
 
   .age-rating {
     padding: 4px 8px;
     font-size: 0.8rem;
+    border-radius: 15px;
   }
 
   .hero-title {
@@ -544,7 +557,7 @@ body {
 
   .nav-menu-container {
     gap: 8px;
-    margin: 0 5px;
+    margin: 0 8px;
   }
 
   .nav-menu-container a {
@@ -558,16 +571,20 @@ body {
 
   .hero-buttons-row {
     gap: 5px;
+    padding: 5px;
+    border-radius: 12px;
   }
 
   .play-btn,
   .info-btn {
     padding: 6px 12px;
     font-size: 0.8rem;
+    border-radius: 12px;
   }
 
   .age-rating {
     padding: 3px 6px;
     font-size: 0.75rem;
+    border-radius: 12px;
   }
 }
