@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  background-image: url("../assets/Background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Overlay gelap */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+b {
+  color: white;
+}
+/* Container login */
+.login-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 50px 50px 40px;
+  width: 440px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 50%;
+  max-width: 160px;
+  display: inline-block;
+}
+
+/* Judul */
+.title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 10px;
+  text-align: left;
+  background: transparent;
+}
+
+label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+/* Password group */
+.password-group {
+  position: relative;
+}
+
+.password-group input {
+  padding-right: 45px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links b {
+  color: #e50914;
+  font-weight: bold;
+}
+
+/* Tombol */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background: #3b3b3b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #777;
+}
+
+.or-text {
+  color: white;
+  margin: 10px 0 20px;
+}
+
+/* Google button */
+.btn-google {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.btn-google:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 40px 30px 30px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
